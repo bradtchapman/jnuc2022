@@ -1,6 +1,9 @@
 #!/bin/bash
 
-#set -x
+## REMEMBER TO SET THE 3 SCRIPT PARAMETERS IN JAMF:
+## PARAMETER 4 = AWS ACCESS KEY
+## PARAMETER 5 = AWS SECRET KEY
+## PARAMETER 6 = BUCKET@REGION
 
 # The /var/tmp folder must exist, or the script will abort immediately.
 
