@@ -297,7 +297,7 @@ awaitUserSurvey() {
 			then
 				swd_echo "message: An error occurred while uploading.  Please try again, or contact your administrator."
 				swd_echo "progresstext: ❌ Upload failed.  Closing in 10 seconds..."
-				/usr/bin/afplay -v 1.0 "/var/tmp/tpir-sad-horns-2.aiff" &
+				/usr/bin/afplay -v 1.0 "/var/tmp/tpir-sad-horns.aiff" &
 				sleep 10
 				uploadStageDone=true
 				uploadSuccess=false
