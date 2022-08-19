@@ -1,3 +1,8 @@
+// This is Lambda Function #1
+// The trigger for this should be the S3 bucket:
+// Event type: s3:ObjectCreated:*
+// Prefix: itslog/logs/
+
 var util = require('util');
 var AWS = require('aws-sdk');  
 AWS.config.region = 'us-east-1';
