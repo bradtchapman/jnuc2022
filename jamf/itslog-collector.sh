@@ -145,7 +145,7 @@ launchSurveyWindow() {
 	| tee "$surveyResponse" &
 	swd_survey_PID=$!
 	
-	/usr/bin/afplay -v 1.0 /var/tmp/mac-crash-sound-8bit.aiff &
+	/usr/bin/afplay -v 1.0 /var/tmp/itslog-crash-mac-8bit.m4a &
 	
 	sleep 1
 
@@ -297,12 +297,12 @@ awaitUserSurvey() {
 			then
 				swd_echo "message: An error occurred while uploading.  Please try again, or contact your administrator."
 				swd_echo "progresstext: ❌ Upload failed.  Closing in 10 seconds..."
-				/usr/bin/afplay -v 1.0 "/var/tmp/tpir-sad-horns.aiff" &
+				/usr/bin/afplay -v 1.0 "/var/tmp/itslog-fail-sad-horns.m4a" &
 				sleep 10
 				uploadStageDone=true
 				uploadSuccess=false
 			else
-				/usr/bin/afplay -v 1.0 "/var/tmp/itslog-success.aiff" &
+				/usr/bin/afplay -v 1.0 "/var/tmp/itslog-success-xylophone.m4a" &
 				if [[ $mini_window_launched == true ]]
 				then
 					swd_echo "message: ✅ File uploaded successfully!"
