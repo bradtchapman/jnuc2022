@@ -180,7 +180,13 @@ generateSysdiagnose() {
 		sleep 1
 		
 	done
+
+	# Copy additional files intp the archive folder before compression   
 	
+	cp /var/log/jamf.log "$sysDiagArchive/"
+	# cp /var/log/somefile1.log
+	# cp /var/log/somefile2.log
+
 	/usr/bin/tar -czf "$sysDiagTarball" "$sysDiagArchive/" &
 	tarPID=$!
 	
